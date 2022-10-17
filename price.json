@@ -5,6 +5,7 @@
       "width": 400,
       "height":400,
       "mark": "area",
+      "title":"The Coffee price",
       "encoding": {
         "x": {
           "field": "date",
