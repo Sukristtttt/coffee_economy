@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500, "height": 300,
+  "data": {"url": "https://raw.githubusercontent.com/Sukristtttt/test2/main/demand%20in%20kg%20per%20person.csv"},
+  "mark": {"type": "area", "tooltip": true},
+  "title":"Number of kilograms of coffee consumed per capita",
+  "params": [{
+  "name": "type",
+  "select": {"type": "point", "fields": ["type"]},
+  "bind": {"legend": "dblclick"}
+}],
+  "encoding": {
+    "x": {
+      "timeUnit": "year", "field": "year",
+      "axis": {"format": "%Y"}
+    },
+    "y": {
+      "aggregate": "sum", "field": "in kg"
+    },
+    "color": {
+      "field": "type",
+      "scale": {"scheme": "browns"}
+    },
+  "opacity": {
+    "condition": {"param": "type", "value": 1},
+    "value": 0.2
+  }
+  }
+}

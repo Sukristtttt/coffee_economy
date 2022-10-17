@@ -1,0 +1,12 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 300,
+    "data": { "url": "https://raw.githubusercontent.com/Sukristtttt/test2/main/coffee%20producton%20by%20type%20.csv" },
+    "mark": { "type": "bar" , "tooltip": true},
+    "encoding": {
+        "x": { "timeUnit": "year", "field": "Year", "type": "ordinal" , "title":"Production by year" },
+        "y": { "aggregate": "sum", "field": "in 1,000 60 kilogram bags" , "title":"Thousand 60 kilogram bags"},
+        "color": { "field": "Type","title":"category" }
+    }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+
+  <!-- Pure CSS library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/grids-responsive-min.css" />
+
+</head>
+
+
+<body>
+<center> 
+  <div class="pure-g">
+    <!-- Left margin -->
+    <div class="pure-u-1-8">
+      <div id="margin"></div>
+    </div>
+
+    <!-- Middle section for content -->
+    <div class="pure-u-3-4">
+      <div id="container">
+        <div id="nps_logo">
+          <img id="nps_img"
+          src="https://lh3.googleusercontent.com/pFTkbM79E2sJqpMxHMEFFHrreFjfW442PaIbzhR0ezLf8QH3bZJDFT54NvDOnG57ejQ--11RkEtPkR-L2q-W2tUQN5p0C1XMQqGzHRzt5RwoPmpIz6zXImmup7YQo9_Reoj_npp0kH6PGjXH4iW6LRqbqS9BztLtdCtvSVpAmO4lRmULzQtE1N7vUGOw5bVdIdcz1PNFujwwY_ZQPiNzprNOi1y49mcExKFfds1uVI21JPnzkv8RYUPmNfl0INHW7ioPbqZdWpxpmsoUGkj0w3_YcfLTmzVNXKpK1fbGflSkAUAX4rCRFyj-4HykTOstjMhf675ullNGA9Tjdj-UeZl6MG3kMEcnK3VULjSY8jRItgy-ID_nuzPTJIes38nATwIlAynAkqALBvBNaXljvypTXcsneN20wdqbNLeEvixtS6-5hZdVFU65_E-6O5KYOM1doicKtWMx_ODzh5Y0jBhxku9bNk8lxxu9AATTPlIFLo05RvybiiRieoxfS2d_q0nYvppDaS7NESGaLn-pKXW1CXTDNUhFNkOgGGcGNlbzlcGSjr0ta41Yu5Hb24W8M6f4IAzhWkTPHuk8y94NgOmTBixiGuC9JiAhgXQ-FtxL5Ead_X0C_5V8Lwtvu0J0NbzcRqBquOpFVEdCj0D9IkPbgDvgzhz27VC5FmIGVkXMfd3u41nBEBBlyuUpDQEGs5UCMYB3lUMVqT9IGhTVXXUGDeJo-ULUGdl5_vfZQNS5yrQEWv_vnzzoeMw3nYZlWzSc62F-GCo8yBpvh-q8ZhCvh9tq3MHJk04zxYZi6fR3RTq-bjV1qmNc-6-7bV0nMZIo6nkLTccT8pLVA0THDhGiQXa4NqWpGIee9p9pAC0oYuYz7y0SA_iL2kk2gS9BPpzkT8FNSaasljuOVFylEGHXRYxc5hHeKAwh-71Qlu0EsXo91f7hNoM0M895jV7xltymkLyciv4-5Q=w1115-h866-no?authuser=1" 
+          width="600" 
+          height="400"
+          alt="PIC"
+          class="center">
+        </div>
+        <div id="title">
+          <h3 style="color: #652515ce; font-family: Segoe UI Black">Zhihua Su / 30748771 </h3>
+          <h4 style="color: #652515ce; font-family: Segoe UI Black"> In this webpage, you can quickly get the economic effects of coffee  in<br> <br>the production and distribution process and some basic coffee knowledge.</h5>
+          <h2 style="color: #dc0000; font-family: Segoe Script" >&#128150 HOPE YOU ENJOY IT &#128150</h2>
+        </div>
+
+        <hr>
+        <hr>
+
+        <!-- map chart heading -->
+        <div id="map_heading">
+          <h1 style="color: #611401; font-size: 50px;font-family: Segoe UI Black">&#129336 Production of Coffee</h3>
+            <p style="color: #652515ce; font-size: 20px; font-family: Sitka Text">This map chart shows all countries with or without coffee bean production Worldwide.</p>
+        </div>
+
+        <!-- map chart grid -->
+        <div class="pure-g">
+          <!-- Chart -->
+          <div class="pure-u-3-4">
+            <div id="map_chart_CB_production" style="width: 100%"></div>
+          </div>
+
+          <!-- Text -->
+          
+          <div class="pure-u-1-4">
+            <div id="map_chart_text">
+              <ul class="right_side_text">
+                
+                <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401"><span style="color: #d50505b5; font-family: Segoe UI Black">Brazil </span> produces the largest amount of coffee beans each year, </span> with <span style="color: #d50505b5; font-family: Segoe UI Black">3700231 </span>tonnes.</span></li>
+                <br>
+                <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">Most countries do not produce coffee beans, with <span style="color: #d50505b5; font-family: Segoe UI Black">climate and geographical location</span> being the main reasons.</span></li>
+                <br>
+                <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">So from the graph we can also infer again that the tropical climate<span style="color: #d50505b5; font-family: Segoe UI Black"> around the equator </span>is a suitable geographic location for coffee beans to grow. Therefore these countries, especially Brazil, produce a particularly large amount of coffee beans.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+        
+        <div class="pure-g">
+          <div class="pure-u-1">
+              <img src="https://lh3.googleusercontent.com/iUP3-9Fb0tOg0mhNpZoq96ZVn0erpm7U3yUHuR1ZkL6v1jTiviirGHJW1PjxbNopj_0rPJgMQLQImE3PYScJ2NQcpXNgajsv9ZKFtFyMUN33GxzBluTf01sBE5_vsaDu_lgt6IwNOWDVHKNtoEUQJf1E4QkXFJVPN3gVxsAIZOasb2dGMjHOHrJox0jb-58vEjViFbmEr_m4OqM2TfhvQqhODHdfkoeq4QQaHxTkJ6bYzK6rXG1gA4Rnah-5rDX-k0WLJLTC1B9PqO4TX9dGf-tPXo68clCKz-9rpx6Xp91vHYmq2gOBTX70hzrD82TbMqQg-ire5-GwJGkI7BTU5tW6KTc608fr96tT2i9fHAFKngsBKtyyypORYnNZ8RU-n5KVRPKkbxMPSceBwYkfhlsjBnA8omAHCuGu0wAj61-YwIysgtyZaygiDBRQ1rEwRxvfFm4s0wfgNtuYnqnOFij00XthAlQLXL7Srw9DqqtgXmtdVq3w3zKPorYE41H5bJDyf-SxNhQKSgGO99wyEkrRKf9CRhc-S1BZ0JI3ObeLLaaFo7CidzDnC7q-4ElBg-OLxONlxySplRO-U-xTN9X3ztErwZposcQhX0SNmAkiDqNoBeoWSppfpJK8bg4l1MOeEOjMQlxPgYblEcpCQY8PFKAXBALXMziV0SMx1dfUqGN8GmXraMkEMgmigIYTc28F7QE_HTR3mxduySaSiDYMhIlh9cHB7Rs1nVAl5yQmEdrPVvIrd2IGXR68zw0D4Bs4jj_Cs1RXnOBcsOGJN-BQDznxqD9iUfE2zUVEhIpf9zJr_WIX6a8_NqCpVx7ZpUpy4cNW_tfKQ3SGYi7WrpcSee1V6Z4LeFCkT7AALtayvBSO5wB_0B5oK8Nti-i71KQKhFdCauhAnnGwbIjBqAcxDXNnyz3VO51aElEMuzsyShZHaCQ18YjAMBje9e5OCElTud4pV0w43g=w1920-h483-no?authuser=1" /
+              width="1200"
+              height="300">
+          </div>
+          <div class="pure-u-1-3">
+              <div id='text_div'>
+                  <h1 style="color: #652515ce; font-family: Segoe UI Black">&#129488 How about the Production Market?</h1>
+                  <p style="color: #652515ce; font-size: 20px; font-family: Sitka Text"> <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">There are over 100 coffee varieties, but <span style="color: #d50505b5; font-family: Segoe UI Black">the main commercial varieties are Arabica and Robusta.</span></li>
+                    <br>
+                     <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">Of these, Arabica dominates the production market, <span style="color: #d50505b5; font-family: Segoe UI Black">with a market share of about 60%.</span></li>
+                     <br>
+                     <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">From the stack chart,you can explore that the production of coffee beans is <span style="color: #d50505b5; font-family: Segoe UI Black">increasing due to the growing demand</span>, which will be seen in the consumption segment.</li></p>
+              </div>
+          </div>
+          <div class="pure-u-1-3">
+            <center>
+              <h4 style="color: #652515ce; font-family: Segoe UI Black">Market share of different types of coffee beans</h4>
+              <div id="pie_chart_market_share">
+            </center>
+          </div>
+          <div class="pure-u-1-3">
+          <right>
+            <h4 style="color: #652515ce; font-family: Segoe UI Black">Share of production of different coffee beans</h4>
+              <div id="stack_chart_type_production">
+              </right>
+              </div>
+          </div>
+      </div>
+
+      <hr> 
+      <hr>
+
+        <!-- map chart heading -->
+        <div id="map_heading">
+          <h1 style="color: #611401; font-size: 50px;font-family: Segoe UI Black"> &#128176 Consumption of Coffee</h3>
+            <p style="color: #652515ce; font-size: 20px; font-family: Sitka Text">You can see the change difference by clicking on the toolbox or pulling.</p>
+        </div>
+
+        <!-- map chart grid -->
+        <div class="pure-g">
+          <!-- Chart -->
+          <div class="pure-u-3-4">
+            <div id="demand" style="width: 100%"></div>
+          </div>
+
+          <!-- Text -->
+          
+          <div class="pure-u-1-4">
+            <div id="map_chart_text">
+              <ul class="right_side_text">
+                <h1 style="color: #652515ce; font-family: Segoe UI Black">DEEMAND</h1>
+                <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">we can see that coffee demand is <span style="color: #d50505b5; font-family: Segoe UI Black">rising</span> by the number of kilograms of coffee consumed per capita.</li>
+                <br>
+                <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">However, in 2020, the overall coffee consumption <span style="color: #d50505b5; font-family: Segoe UI Black">decreases</span>, due to <span style="color: #d50505b5; font-family: Segoe UI Black">the lack of labor</span> and <span style="color: #d50505b5; font-family: Segoe UI Black">home isolation</span> under Covid-19 that cannot be consumed, but gradually picks up in 2021.</li>
+                <br>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="pure-g">
+          <!-- Chart -->
+          <div class="pure-u-3-4">
+            <div id="price" style="width: 100%"></div>
+          </div>
+
+          <!-- Text -->
+          
+          <div class="pure-u-1-4">
+            <div id="map_chart_text">
+              <ul class="right_side_text">
+                
+                <h1 style="color: #652515ce; font-family: Segoe UI Black">PRICE</h1>
+                <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">Overall prices are <span style="color: #d50505b5; font-family: Segoe UI Black">going up</span>, which is inevitable, but not in a regular way.</li>
+                <br>
+                <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">We can see that prices were <span style="color: #d50505b5; font-family: Segoe UI Black">down from 2000-2002</span> and <span style="color: #d50505b5; font-family: Segoe UI Black">peaked from then until May 2011</span>, when they exceeded three dollars a pound.</li>
+                <br>
+                <li style ="font-size: 20px;font-family: Franklin Gothic Medium;color:#611401">After that it fell to the level of one dollar to one point five dollars repeatedly fluctuating until the arrival of COVID-19, due to <span style="color: #d50505b5; font-family: Segoe UI Black">the impact of demand, oversupply and subsequent inflation</span> caused by the price of coffee again ushered in an upward trend.</li>
+                <br>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+      </div>
+
+      <hr>
+      <hr> 
+      <h2 style="color: #dc0000; font-family: Segoe Script" >&#129497 Thank you for reading &#129501</h2>
+
+      
+      
+
+      
+          
+      
+
+        
+
+        
+
+
+  <script type="text/javascript">
+
+    var spec1 = "choropleth_map.vg.json";
+    var spec2 = "coffee_bean_market_share.vg.json"
+    var spec3 = "bean production by type.json"
+    var spec4 = "demand.json"
+    var spec5 = "price.json"
+  
+
+    vegaEmbed('#map_chart_CB_production', spec1).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#pie_chart_market_share', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#stack_chart_type_production', spec3).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#demand', spec4).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#price', spec5).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+   
+
+  </script>
+
+</body>
+</html>

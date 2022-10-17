@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/Sukristtttt/test2/main/price.csv"},
+    "vconcat": [{
+      "width": 400,
+      "height":400,
+      "mark": "area",
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "scale": {"domain": {"param": "brush"}},
+          "axis": {"title": ""}
+        },
+        "y": {"field": "value", "type": "quantitative","title":"price in dollar"}
+        
+      }
+      
+    }, {
+      "width": 600,
+      "height": 100,
+      "mark": "area",
+      "params": [{
+        "name": "brush",
+        "select": {"type": "interval", "encodings": ["x"]}
+      }],
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "axis": {"tickCount": 3, "grid": false},
+          "title":"price in dollar"
+        }
+      }
+    }]
+    
+  }

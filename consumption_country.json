@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height":250,
+    "description": "A bar chart that sorts the y-values by the x-values.",
+    "data": {"url": "https://raw.githubusercontent.com/Sukristtttt/test2/main/consumption%20by%20year%20and%20country.csv"},
+    
+    "mark": {"type": "bar", "tooltip": true},
+    "encoding": {
+      "y": {
+        "field": "country",
+        "type": "ordinal",
+        "sort": "-x"
+      },
+      "x": {
+        "aggregate": "sum",
+        "field": "totCons2019",
+        "title": "Total production"
+      },
+      "color": {
+        "field":"country",
+        "scale":{"range": ["#524740","#de8d59","#bd4c04","#916100","#5c4300"]}
+      }
+    }
+  }
