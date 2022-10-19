@@ -9,6 +9,9 @@
   "select": {"type": "point", "fields": ["type"]},
   "bind": {"legend": "dblclick"}
 }],
+"transform": [
+    {"filter": {"param": "type"}}
+  ],
   "encoding": {
     "x": {
       "timeUnit": "year", "field": "year",
